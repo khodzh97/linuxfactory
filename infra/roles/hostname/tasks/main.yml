@@ -1,8 +1,0 @@
----
-# tasks file for hostname
-
-- name: set hostname
-  vars: 
-    new_hostname: "new_hostname"
-  hostname:
-    name: "{{new_hostname}}"
