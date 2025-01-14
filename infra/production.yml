@@ -1,11 +1,5 @@
 ---
 
-- hosts: web
-  roles:
-     - { role: 'common' }
-     - { role: 'hostname', new_hostname: "lf-prod" }
-
 - hosts: db
   roles:
      - { role: 'common' }
-     - { role: 'hostname', new_hostname: "lf-prod" }
