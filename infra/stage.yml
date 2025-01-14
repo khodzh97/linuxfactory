@@ -3,9 +3,9 @@
 - hosts: web
   roles:
      - { role: 'common' }
-     - { role: 'hostname', new_hostname: "lf-stage" }
+     - { role: 'hostname'}
 
 - hosts: db
   roles:
      - { role: 'common' }
-     - { role: 'hostname', new_hostname: "lf-stage" }
+     - { role: 'hostname'}
