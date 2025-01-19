@@ -3,3 +3,4 @@
 - hosts: db
   roles:
      - { role: 'common' }
+     - { role: 'docker' }
