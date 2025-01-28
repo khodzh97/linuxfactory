@@ -1,2 +1,22 @@
-lf-prod ansible_host=192.168.87.131 ansible_user=root
-lf-stage ansible_host=192.168.87.129 ansible_user=root
+[web]
+lf-stage ansible_host=192.168.87.129 ansible_user=user
+
+[web:vars]
+swap_size=2G
+packages=git,htop,zip
+
+[db]
+lf-prod ansible_host=192.168.87.131 ansible_user=user
+
+[db:vars]
+swap_size=1G
+packages=mc,htop,rsync
+
+[all:children]
+web
+db
+
+[all:vars]
+web_url=bashdays.ru
+web_port=5000
+timezone=Europe/Moscow
